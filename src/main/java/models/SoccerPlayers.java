@@ -1,6 +1,11 @@
 package models;
 
-public class SoccerPlayers {
+import daos.CRUD;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SoccerPlayers implements CRUD<SoccerPlayers> {
     private int playerID;
     private String firstName;
     private String lastName;
@@ -47,6 +52,55 @@ public class SoccerPlayers {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+
+    public int getRemYearsOnContract() {
+        return remYearsOnContract;
+    }
+
+    public void setRemYearsOnContract(int remYearsOnContract) {
+        this.remYearsOnContract = remYearsOnContract;
+    }
+
+    @Override
+    public void create(SoccerPlayers entity) {
+
+    }
+
+    @Override
+    public SoccerPlayers read(int id) {
+        return new SoccerPlayers(id, "John", "Doe", "Forward", 50000, "USA", 3);
+    }
+
+    @Override
+    public void update(SoccerPlayers Entity) {
+
+    }
+
+    @Override
+    public void delete(int id) {
+
+    }
+
+    @Override
+    public List<SoccerPlayers> findAll() {
+        return new ArrayList<>();
     }
 }
 
