@@ -20,7 +20,7 @@ public class DataBasePractice {
     public static void main(String[] args) {
         Connection connection = DataBasePractice.getConnection();
         if (connection != null) {
-            System.out.println("Connected to the database successfully, Sir.");
+            System.out.println("Connected to the database successfully.");
         }
     }
 }
